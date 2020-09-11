@@ -17,7 +17,9 @@ import javax.persistence.Table;
 public class Student {
     @Id
     private long id;
+
     private String name;
+
     private String phone;
 
     private long groupId;

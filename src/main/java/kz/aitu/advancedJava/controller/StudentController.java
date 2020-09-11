@@ -19,8 +19,18 @@ public class StudentController {
         this.studentRepository = studentRepository;
     }
 
-    @GetMapping("/api/students/{groupId}")
+    @GetMapping("/api/students/group/{groupId}")
     public ResponseEntity<?> getStudents(@PathVariable Long groupId) {
         return ResponseEntity.ok(studentRepository.findAllByGroupId(groupId));
+    }
+
+    @GetMapping("/api/students")
+    public ResponseEntity<?> getStudents() {
+        return ResponseEntity.ok(studentRepository.findAll());
+    }
+
+    @GetMapping("/api/students/{studentId}")
+    public ResponseEntity<?> getStudent(@PathVariable Long studentId) {
+        return ResponseEntity.ok(studentRepository.findById(studentId));
     }
 }
