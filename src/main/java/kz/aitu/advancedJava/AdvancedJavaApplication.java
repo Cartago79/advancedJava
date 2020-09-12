@@ -10,4 +10,5 @@ public class AdvancedJavaApplication {
 		SpringApplication.run(AdvancedJavaApplication.class, args);
 	}
 
+
 }
