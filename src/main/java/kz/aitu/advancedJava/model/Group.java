@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "group")
+@Table(name = "groups")
 public class Group {
     @Id
     private long id;
